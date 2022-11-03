@@ -10,6 +10,8 @@ import 'tippy.js/dist/tippy.css';
 import { UploadIcon, MessageIcon, InboxIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -50,7 +52,7 @@ const MENU_ITEMS = [
 ]
 
 function Header() {
-    
+
 
     const currentUser = true;
 
@@ -93,9 +95,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="Tiktok" />
+                    <Link to={routesConfig.home} className={cx('logo-link')}><img src={images.logo} alt="Tiktok" /></Link>
                 </div>
-                
+
                 <Search />
 
                 <div className={cx('actions')}>
@@ -129,7 +131,7 @@ function Header() {
                         {currentUser ? (
                             <Image className={cx('user-avatar')}
                                 src='https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/ea0854578085ab26effc2c7b8cefa270~c5_100x100.jpeg?x-expires=1651658400&x-signature=zeUCDyTxctGYZ5%2Bsh422klviXFE%3D'
-                                alt='Nguyen Van A'/>
+                                alt='Nguyen Van A' />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
