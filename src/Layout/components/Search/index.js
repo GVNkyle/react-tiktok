@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '~/components/SearchAccountItem';
-import * as searchService from '~/apiServices/searchService';
+import AccountItem from '~/components/AccountItem';
+import * as searchService from '~/services/searchService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
